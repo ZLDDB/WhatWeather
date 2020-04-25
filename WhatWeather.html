@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue天气查询</title>
+    <!-- 引入css样式 -->
+    <link rel="stylesheet" href="css/天气查询样式.css" />
+  </head>
+  <body>
+    <!-- 设置元素开始 -->
+    <div id="totalApp">
+      <div class="header">
+        <h1 id="title">小 孟 查 天 气</h1>
+      </div>
+      <div class="main">
+        <input
+          autofocus
+          autocomplete="off"
+          placeholder="请输入要查询天气的城市"
+          type="text"
+          @keyup.enter="getWeather"
+          v-model="city"
+          id="search"
+        />
+        <button type="submit" @click="getWeather">搜 索</button>
+        <ul id="hotCityList" v-for="(item,index) in hotCityList">
+          <li class="hotCity">
+            <a href="#" @click="getWeather(index)">{{item}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="view">
+        <ul id="weatherList" v-for="(item,index) in data">
+          <li id="today">
+            <h2 class="weather">{{item.type}}</h2>
+            <h3 class="temperature">{{item.low}}~{{item.high}}</h3>
+            <h4 class="date">{{item.date}}</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 设置元素结束 -->
+    <!-- 引入axios库 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 引入开发版的vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入js脚本 -->
+    <script src="js/天气查询脚本.js"></script>
+  </body>
+</html>

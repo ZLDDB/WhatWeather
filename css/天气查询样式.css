@@ -1,0 +1,80 @@
+.header {
+  margin: 40px auto;
+  text-align: center;
+}
+#title {
+  color: blueviolet;
+  font-size: 60px;
+  text-shadow: 5px 5px 3px antiquewhite;
+}
+.main {
+  text-align: center;
+  margin-top: 20px;
+}
+#search {
+  border: 0.8px solid rgb(41, 116, 119);
+  width: 500px;
+  height: 30px;
+  margin-right: 0;
+  padding-right: 0;
+  flex-grow: 1;
+  font-family: "宋体";
+  font-size: large;
+}
+button {
+  position: relative;
+  top: 1.2px;
+  width: 70px;
+  height: 34px;
+  font-family: "仿宋";
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(163, 199, 201);
+  color: rgb(30, 54, 99);
+}
+#hotCityList {
+  position: relative;
+  left: 300px;
+  list-style: none;
+}
+#hotCityList li {
+  float: left;
+  margin: 0 10px;
+}
+a:link {
+  color: rgb(4, 82, 112);
+}
+a:visited {
+  color: rgb(4, 82, 112);
+}
+.view {
+  margin: 50px auto;
+  /* display: flex;
+  justify-content: center;
+  width: 900px; */
+  text-align: center;
+}
+#weatherList {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+.view li {
+  display: inline-block;
+  margin: 20px 0px;
+}
+.weather {
+  color: coral;
+  font-size: 30px;
+  font-weight: 549;
+  margin-bottom: 2px;
+}
+.temperature {
+  color: rgb(184, 85, 49);
+  font-weight: 450;
+  margin: 5px 0;
+}
+.date {
+  color: darkslategrey;
+  font-weight: normal;
+}
